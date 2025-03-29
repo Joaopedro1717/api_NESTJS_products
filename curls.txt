@@ -1,0 +1,24 @@
+**-POST-**
+curl --location 'localhost:3000/products' \
+--header 'Content-Type: application/json' \
+--data '{
+    "nome_do_produto": "Guitarra Yamaha",
+    "fornecedor": "Yamaha",
+    "endereco_fornecedor": "Rua de Baixo, 26",
+    "quantidade": 25,
+    "descricao": "Guitarra fera"
+}'
+
+**-GET-**
+curl --location 'localhost:3000/products'
+
+**-PUT-**
+curl --location --request PUT 'localhost:3000/products/2' \
+--header 'Content-Type: application/json' \
+--data '{
+    "quantidade": 40,
+    "descricao": "guitarra top demais"
+}'
+
+**-DELETE-**
+curl --location --request DELETE 'localhost:3000/products/1'
